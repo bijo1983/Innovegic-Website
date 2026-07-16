@@ -88,6 +88,15 @@ The original `img/logo.png` is untouched. Derivatives generated from it:
 `img/apple-touch-icon.png`. All photography/illustrations are reused from the
 previous site's `img/` folder.
 
+## Cookie Consent
+
+A lightweight consent banner (bottom-left) offers **Accept All** / **Essential
+Only**. The choice is stored locally as `innovegic-cookie-consent`; the footer's
+**Cookie Settings** link reopens the banner, and `cookie-policy.html` documents
+the categories. Analytics must only be loaded inside the `cookies:accepted`
+listener in `js/main.js` (placeholder marked) so nothing optional runs without
+consent.
+
 ## SEO Implemented
 
 - Unique `<title>` / meta description / keywords per page

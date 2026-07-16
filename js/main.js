@@ -89,6 +89,40 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* ---------- Cookie consent ----------
+     Consent is stored locally ('all' or 'essential'). Analytics or other
+     non-essential scripts must only load inside the 'cookies:accepted'
+     listener below, so nothing optional runs without consent.          */
+  const COOKIE_KEY = 'innovegic-cookie-consent';
+  const cookieBanner = document.getElementById('cookie-banner');
+  const readConsent = () => {
+    try { return localStorage.getItem(COOKIE_KEY); } catch (e) { return null; }
+  };
+  const applyConsent = (value) => {
+    try { localStorage.setItem(COOKIE_KEY, value); } catch (e) { /* storage unavailable */ }
+    if (cookieBanner) cookieBanner.classList.add('hidden');
+    if (value === 'all') document.dispatchEvent(new CustomEvent('cookies:accepted'));
+  };
+  if (cookieBanner) {
+    if (!readConsent()) cookieBanner.classList.remove('hidden');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const declineBtn = document.getElementById('cookie-decline');
+    if (acceptBtn) acceptBtn.addEventListener('click', () => applyConsent('all'));
+    if (declineBtn) declineBtn.addEventListener('click', () => applyConsent('essential'));
+  }
+  document.querySelectorAll('[data-cookie-settings]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (cookieBanner) cookieBanner.classList.remove('hidden');
+    });
+  });
+  document.addEventListener('cookies:accepted', () => {
+    /* Load analytics here once configured, e.g.:
+       const s = document.createElement('script');
+       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX';
+       document.head.appendChild(s); */
+  });
+  if (readConsent() === 'all') document.dispatchEvent(new CustomEvent('cookies:accepted'));
+
   /* ---------- Contact / demo forms (mailto handoff) ----------
      Replace with your form backend endpoint (e.g. Formspree,
      Netlify Forms, or a custom API) when available.            */
