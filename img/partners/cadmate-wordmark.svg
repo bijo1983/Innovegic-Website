@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="56" viewBox="0 0 250 56" role="img" aria-label="CADMATE">
+  <rect width="56" height="56" rx="14" fill="#0F4C81"/>
+  <path d="M28 11 L15 45 h6.5 l2.6-7 h7.8 l2.6 7 H41 Z M26.3 32.5 L28 27.5 l1.7 5 Z" fill="#fff"/>
+  <path d="M17 20 L39 40 M39 20 L17 40" stroke="#00B4D8" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+  <text x="68" y="37" font-family="Poppins, Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0F172A" letter-spacing="2">CADMATE</text>
+</svg>
