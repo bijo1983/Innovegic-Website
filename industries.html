@@ -105,62 +105,67 @@
 
     <section class="page-hero" aria-label="Page introduction">
         <div class="grid-overlay" aria-hidden="true"></div>
-        <div class="blob w-[380px] h-[380px] bg-brandpink/15 -top-24 right-10" aria-hidden="true"></div>
         <div class="relative max-w-7xl mx-auto px-6">
-            <nav class="text-xs text-slate-400 mb-5 font-medium" aria-label="Breadcrumb">
-                <a href="index.html" class="hover:text-secondary transition-colors">Home</a><span class="mx-2" aria-hidden="true">/</span><span class="text-slate-200">Industries</span>
+            <nav class="text-xs text-slate-500 mb-5 font-medium" aria-label="Breadcrumb">
+                <a href="index.html" class="hover:text-secondary transition-colors">Home</a><span class="mx-2" aria-hidden="true">/</span><span class="text-slate-700">Industries</span>
             </nav>
-            <h1 class="text-4xl md:text-5xl font-bold max-w-3xl leading-tight reveal">Nine Industries. <span class="gradient-text-warm">One Standard of Excellence.</span></h1>
-            <p class="mt-6 text-lg text-slate-300 max-w-2xl reveal" style="transition-delay:.1s">Sector expertise isn't a slide in our deck — it's built into our platforms, our people and the way we deliver.</p>
+            <h1 class="text-4xl md:text-5xl font-bold max-w-3xl leading-tight reveal">Nine Industries. <span class="gradient-text">One Standard of Excellence.</span></h1>
+            <p class="mt-6 text-lg text-slate-600 max-w-2xl reveal" style="transition-delay:.1s">Sector expertise isn't a slide in our deck — it's built into our platforms, our people and the way we deliver.</p>
         </div>
     </section>
 
     <section class="section-pad" aria-label="Industries">
         <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
-            <article class="card card-top-accent p-7 reveal">
-                <span class="icon-badge"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></span>
-                <h2 class="mt-4 text-xl font-semibold">Healthcare</h2>
-                <p class="mt-2 text-sm text-slate-500 leading-relaxed">Hospitals, clinics and healthcare groups — patient journeys, clinical workflows, quality compliance and operational analytics.</p>
-                <div class="mt-4 flex flex-wrap gap-2"><span class="chip">Patient Systems</span><span class="chip">QMS</span><span class="chip">Analytics</span></div>
+            <article class="icard reveal">
+                <div class="icard-photo"><img src="assets/images/healthcare/dur-medication.jpg" alt="Pharmacist handling medication for dispensing" loading="lazy" width="1200" height="900"></div>
+                <div class="icard-body">
+                    <h2 class="text-xl font-semibold">Healthcare</h2>
+                    <p class="mt-2 text-sm text-slate-500 leading-relaxed">Hospitals, clinics and healthcare groups — patient journeys, clinical workflows, quality compliance and operational analytics.</p>
+                    <div class="mt-4 flex flex-wrap gap-2"><span class="chip">Patient Systems</span><span class="chip">QMS</span><span class="chip">Analytics</span></div>
+                </div>
             </article>
-            <article class="card card-top-accent p-7 reveal" style="transition-delay:.06s">
-                <span class="icon-badge !bg-gradient-to-br !from-secondary !to-accent"><i class="fa-solid fa-landmark" aria-hidden="true"></i></span>
-                <h2 class="mt-4 text-xl font-semibold">Government</h2>
-                <p class="mt-2 text-sm text-slate-500 leading-relaxed">Ministries and public entities — citizen portals, case management, secure records and multilingual digital services.</p>
-                <div class="mt-4 flex flex-wrap gap-2"><span class="chip">e-Government</span><span class="chip">Automation</span><span class="chip">Security</span></div>
+            <article class="icard reveal" style="transition-delay:.06s">
+                <div class="icard-photo"><img src="assets/images/industries/government.jpg" alt="Software development for government digital platforms" loading="lazy" width="1200" height="900"></div>
+                <div class="icard-body">
+                    <h2 class="text-xl font-semibold">Government</h2>
+                    <p class="mt-2 text-sm text-slate-500 leading-relaxed">Ministries and public entities — citizen portals, case management, secure records and multilingual digital services.</p>
+                    <div class="mt-4 flex flex-wrap gap-2"><span class="chip">e-Government</span><span class="chip">Automation</span><span class="chip">Security</span></div>
+                </div>
             </article>
             <article class="card card-top-accent p-7 reveal" style="transition-delay:.12s">
-                <span class="icon-badge !bg-gradient-to-br !from-brandpink !to-secondary"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
+                <span class="icon-badge"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></span>
                 <h2 class="mt-4 text-xl font-semibold">Banking &amp; Finance</h2>
                 <p class="mt-2 text-sm text-slate-500 leading-relaxed">Financial institutions — process automation, regulatory reporting, document workflows and data-driven decisioning.</p>
                 <div class="mt-4 flex flex-wrap gap-2"><span class="chip">Compliance</span><span class="chip">Automation</span><span class="chip">BI</span></div>
             </article>
             <article class="card card-top-accent p-7 reveal">
-                <span class="icon-badge !bg-gradient-to-br !from-accent !to-primary"><i class="fa-solid fa-industry" aria-hidden="true"></i></span>
+                <span class="icon-badge"><i class="fa-solid fa-industry" aria-hidden="true"></i></span>
                 <h2 class="mt-4 text-xl font-semibold">Manufacturing</h2>
                 <p class="mt-2 text-sm text-slate-500 leading-relaxed">Producers and processors — production planning, inventory, quality control and smart-factory analytics on one ERP core.</p>
                 <div class="mt-4 flex flex-wrap gap-2"><span class="chip">ERP</span><span class="chip">MES</span><span class="chip">Quality</span></div>
             </article>
-            <article class="card card-top-accent p-7 reveal" style="transition-delay:.06s">
-                <span class="icon-badge"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></span>
-                <h2 class="mt-4 text-xl font-semibold">Logistics</h2>
-                <p class="mt-2 text-sm text-slate-500 leading-relaxed">Distributors and 3PLs — warehouse management, fleet visibility, supplier integration and AI demand forecasting.</p>
-                <div class="mt-4 flex flex-wrap gap-2"><span class="chip">WMS</span><span class="chip">Fleet</span><span class="chip">Forecasting</span></div>
+            <article class="icard reveal" style="transition-delay:.06s">
+                <div class="icard-photo"><img src="assets/images/industries/logistics.jpg" alt="Warehouse workers reviewing inventory with a tablet" loading="lazy" width="1200" height="900"></div>
+                <div class="icard-body">
+                    <h2 class="text-xl font-semibold">Logistics</h2>
+                    <p class="mt-2 text-sm text-slate-500 leading-relaxed">Distributors and 3PLs — warehouse management, fleet visibility, supplier integration and AI demand forecasting.</p>
+                    <div class="mt-4 flex flex-wrap gap-2"><span class="chip">WMS</span><span class="chip">Fleet</span><span class="chip">Forecasting</span></div>
+                </div>
             </article>
             <article class="card card-top-accent p-7 reveal" style="transition-delay:.12s">
-                <span class="icon-badge !bg-gradient-to-br !from-secondary !to-accent"><i class="fa-solid fa-school" aria-hidden="true"></i></span>
+                <span class="icon-badge"><i class="fa-solid fa-school" aria-hidden="true"></i></span>
                 <h2 class="mt-4 text-xl font-semibold">Education</h2>
                 <p class="mt-2 text-sm text-slate-500 leading-relaxed">Schools, universities and academies — LMS platforms, student systems and AI-personalized learning experiences.</p>
                 <div class="mt-4 flex flex-wrap gap-2"><span class="chip">LMS</span><span class="chip">SIS</span><span class="chip">AI Learning</span></div>
             </article>
             <article class="card card-top-accent p-7 reveal">
-                <span class="icon-badge !bg-gradient-to-br !from-brandpink !to-secondary"><i class="fa-solid fa-hotel" aria-hidden="true"></i></span>
+                <span class="icon-badge"><i class="fa-solid fa-hotel" aria-hidden="true"></i></span>
                 <h2 class="mt-4 text-xl font-semibold">Hospitality</h2>
                 <p class="mt-2 text-sm text-slate-500 leading-relaxed">Hotels and F&amp;B groups — guest experience apps, back-office ERP, HR and payroll for large distributed teams.</p>
                 <div class="mt-4 flex flex-wrap gap-2"><span class="chip">Guest Apps</span><span class="chip">ERP</span><span class="chip">HR</span></div>
             </article>
             <article class="card card-top-accent p-7 reveal" style="transition-delay:.06s">
-                <span class="icon-badge !bg-gradient-to-br !from-accent !to-primary"><i class="fa-solid fa-medal" aria-hidden="true"></i></span>
+                <span class="icon-badge"><i class="fa-solid fa-medal" aria-hidden="true"></i></span>
                 <h2 class="mt-4 text-xl font-semibold">Sports</h2>
                 <p class="mt-2 text-sm text-slate-500 leading-relaxed">Clubs, academies and facilities — bookings, tournaments, memberships and payments on BadmintonBooking.com.</p>
                 <div class="mt-4 flex flex-wrap gap-2"><span class="chip">Bookings</span><span class="chip">Tournaments</span><span class="chip">Mobile</span></div>
@@ -263,8 +268,10 @@
         </div>
     </div>
 
-    <a href="https://wa.me/97338991983" target="_blank" rel="noopener" id="whatsapp-fab" aria-label="Chat with Innovegic on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-    <button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    <div class="fab-dock" role="navigation" aria-label="Quick actions">
+        <a href="https://wa.me/97338991983" target="_blank" rel="noopener" id="whatsapp-fab" aria-label="Chat with Innovegic on WhatsApp" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <button id="back-to-top" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    </div>
 
     <script src="js/main.js" defer></script>
 </body>

@@ -118,13 +118,12 @@
 
     <section class="page-hero" aria-label="Page introduction">
         <div class="grid-overlay" aria-hidden="true"></div>
-        <div class="blob w-[380px] h-[380px] bg-secondary/25 -top-24 right-1/4" aria-hidden="true"></div>
         <div class="relative max-w-7xl mx-auto px-6">
-            <nav class="text-xs text-slate-400 mb-5 font-medium" aria-label="Breadcrumb">
-                <a href="index.html" class="hover:text-secondary transition-colors">Home</a><span class="mx-2" aria-hidden="true">/</span><span class="text-slate-200">Resources</span>
+            <nav class="text-xs text-slate-500 mb-5 font-medium" aria-label="Breadcrumb">
+                <a href="index.html" class="hover:text-secondary transition-colors">Home</a><span class="mx-2" aria-hidden="true">/</span><span class="text-slate-700">Resources</span>
             </nav>
-            <h1 class="text-4xl md:text-5xl font-bold max-w-3xl leading-tight reveal">Insights for <span class="gradient-text-warm">Technology Leaders</span></h1>
-            <p class="mt-6 text-lg text-slate-300 max-w-2xl reveal" style="transition-delay:.1s">Practical perspectives from our consultants and engineers — on AI, ERP, cloud and the realities of digital transformation.</p>
+            <h1 class="text-4xl md:text-5xl font-bold max-w-3xl leading-tight reveal">Insights for <span class="gradient-text">Technology Leaders</span></h1>
+            <p class="mt-6 text-lg text-slate-600 max-w-2xl reveal" style="transition-delay:.1s">Practical perspectives from our consultants and engineers — on AI, ERP, cloud and the realities of digital transformation.</p>
         </div>
     </section>
 
@@ -211,7 +210,7 @@
                 <input id="newsletter-email" name="Email" type="email" required placeholder="you@company.com" class="form-input flex-1 !bg-white/10 !border-white/20 !text-white placeholder:text-slate-400">
                 <button type="submit" class="btn btn-primary">Subscribe <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
             </form>
-            <p class="form-note hidden mt-4 text-sm text-accent" role="status"></p>
+            <p class="form-note hidden mt-4 text-sm text-primary" role="status"></p>
         </div>
     </section>
 </main>
@@ -294,8 +293,10 @@
         </div>
     </div>
 
-    <a href="https://wa.me/97338991983" target="_blank" rel="noopener" id="whatsapp-fab" aria-label="Chat with Innovegic on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-    <button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    <div class="fab-dock" role="navigation" aria-label="Quick actions">
+        <a href="https://wa.me/97338991983" target="_blank" rel="noopener" id="whatsapp-fab" aria-label="Chat with Innovegic on WhatsApp" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <button id="back-to-top" aria-label="Back to top" title="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    </div>
 
     <script src="js/main.js" defer></script>
 </body>

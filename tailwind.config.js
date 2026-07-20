@@ -4,15 +4,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0F4C81',
-        secondary: '#00B4D8',
-        accent: '#34D399',
+        primary: '#0A7CBC',
+        'primary-deep': '#086298',
+        secondary: '#3B9FD6',
+        accent: '#D84C72',
         dark: '#0F172A',
         light: '#F8FAFC',
-        brandpink: '#E94560'
+        'bg-gray': '#F7F9FC',
+        'bg-blue': '#F3F8FC',
+        muted: '#64748B',
+        brandpink: '#D84C72'
       },
       fontFamily: {
-        heading: ['Poppins', 'sans-serif'],
+        heading: ['Plus Jakarta Sans', 'sans-serif'],
         body: ['Inter', 'sans-serif']
       }
     }
