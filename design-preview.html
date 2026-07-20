@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Preview — Innovegic UI/UX Refresh</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="favicon.ico">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link href="lib/fontawesome/css/all.min.css" rel="stylesheet">
+    <style>
+    /* ============ Proposed design tokens ============ */
+    @font-face { font-family:'Plus Jakarta Sans'; font-weight:500; font-display:swap; src:url('fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2'); }
+    @font-face { font-family:'Plus Jakarta Sans'; font-weight:600; font-display:swap; src:url('fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2'); }
+    @font-face { font-family:'Plus Jakarta Sans'; font-weight:700; font-display:swap; src:url('fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2'); }
+    @font-face { font-family:'Plus Jakarta Sans'; font-weight:800; font-display:swap; src:url('fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2'); }
+
+    :root {
+      --primary:#0A7CBC; --primary-deep:#086298; --accent:#D84C72;
+      --ink:#0F172A; --muted:#64748B;
+      --bg:#FFFFFF; --bg-gray:#F7F9FC; --bg-blue:#F3F8FC;
+      --line:#E2E8F0; --radius:20px;
+      --shadow-1:0 1px 3px rgba(15,23,42,.06),0 8px 24px -12px rgba(15,23,42,.08);
+      --shadow-2:0 4px 12px rgba(15,23,42,.06),0 24px 48px -16px rgba(10,124,188,.18);
+      --ease:cubic-bezier(.22,1,.36,1);
+    }
+    * { margin:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; color:var(--muted); background:var(--bg); font-size:17px; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3,h4,.hd { font-family:'Plus Jakarta Sans','Poppins',sans-serif; color:var(--ink); }
+    .wrap { max-width:1200px; margin:0 auto; padding:0 32px; }
+    .preview-bar { background:var(--ink); color:#cbd5e1; font-size:13px; text-align:center; padding:8px 16px; letter-spacing:.06em; }
+    .preview-bar b { color:#7dd3fc; }
+    .divider-label { max-width:1200px; margin:64px auto 20px; padding:0 32px; font-size:12px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); }
+
+    /* ============ Header ============ */
+    header.site { position:sticky; top:0; z-index:50; background:rgba(255,255,255,.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
+    header.site .row { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+    .nav a { font-family:'Plus Jakarta Sans',sans-serif; font-size:15px; font-weight:600; color:var(--muted); text-decoration:none; margin:0 14px; padding:6px 0; border-bottom:2px solid transparent; transition:all .3s var(--ease); }
+    .nav a:hover, .nav a.on { color:var(--primary); border-bottom-color:var(--primary); }
+    .btn { display:inline-flex; align-items:center; gap:10px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:16px; border-radius:12px; padding:14px 28px; text-decoration:none; transition:all .3s var(--ease); cursor:pointer; border:0; }
+    .btn-primary { background:var(--primary); color:#fff; box-shadow:0 8px 20px -8px rgba(10,124,188,.45); }
+    .btn-primary:hover { background:var(--primary-deep); transform:translateY(-2px); box-shadow:0 14px 28px -10px rgba(10,124,188,.5); }
+    .btn-quiet { background:#fff; color:var(--ink); border:1.5px solid var(--line); }
+    .btn-quiet:hover { border-color:var(--primary); color:var(--primary); transform:translateY(-2px); }
+    .btn-sm { padding:10px 20px; font-size:14px; }
+
+    /* ============ Hero (light, photo right) ============ */
+    .hero { background:linear-gradient(180deg,#fff 0%,var(--bg-blue) 100%); padding:88px 0 96px; }
+    .hero .grid { display:grid; grid-template-columns:1.05fr .95fr; gap:64px; align-items:center; }
+    .kicker { display:inline-flex; align-items:center; gap:8px; font-family:'Plus Jakarta Sans',sans-serif; font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--primary); background:var(--bg-blue); border:1px solid #DBEAFE; border-radius:999px; padding:8px 18px; }
+    .kicker::before { content:""; width:7px; height:7px; border-radius:99px; background:var(--accent); }
+    .hero h1 { font-size:66px; line-height:1.08; font-weight:800; letter-spacing:-.02em; margin-top:26px; }
+    .hero h1 .em { color:var(--primary); }
+    .hero p.lede { font-size:19px; margin-top:24px; max-width:540px; }
+    .hero .ctas { display:flex; gap:16px; margin-top:36px; }
+    .trust { display:flex; gap:26px; margin-top:36px; font-size:15px; color:var(--muted); }
+    .trust span { display:flex; align-items:center; gap:8px; }
+    .trust i { color:var(--primary); font-size:14px; }
+    .hero-media { position:relative; }
+    .hero-media img { width:100%; border-radius:24px; box-shadow:var(--shadow-2); display:block; }
+    .hero-media .tag { position:absolute; left:-18px; bottom:28px; background:#fff; border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-1); padding:14px 20px; display:flex; align-items:center; gap:12px; }
+    .hero-media .tag .dot { width:42px; height:42px; border-radius:12px; background:var(--bg-blue); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:17px; }
+    .hero-media .tag b { font-family:'Plus Jakarta Sans',sans-serif; font-size:15px; color:var(--ink); display:block; }
+    .hero-media .tag small { font-size:12.5px; color:var(--muted); }
+
+    /* ============ Section heading scale ============ */
+    .sect { padding:88px 0; }
+    .sect.gray { background:var(--bg-gray); }
+    .sect-head { max-width:640px; margin:0 auto 56px; text-align:center; }
+    .sect-head h2 { font-size:44px; font-weight:800; letter-spacing:-.015em; line-height:1.15; margin-top:18px; }
+    .sect-head p { margin-top:16px; font-size:17.5px; }
+
+    /* ============ Service cards (Option 2: monochrome icon system) ============ */
+    .cards4 { display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
+    .scard { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:34px 30px; box-shadow:var(--shadow-1); transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease); }
+    .scard:hover { transform:translateY(-5px); box-shadow:var(--shadow-2); border-color:#BFDBFE; }
+    .itile { width:58px; height:58px; border-radius:15px; background:var(--bg-blue); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:23px; transition:all .3s var(--ease); }
+    .scard:hover .itile { background:var(--primary); color:#fff; }
+    .scard h3 { font-size:23px; font-weight:700; margin-top:22px; }
+    .scard p { font-size:15.5px; margin-top:10px; line-height:1.65; }
+    .scard .more { display:inline-flex; align-items:center; gap:8px; margin-top:18px; font-family:'Plus Jakarta Sans',sans-serif; font-size:14.5px; font-weight:700; color:var(--primary); text-decoration:none; }
+    .scard .more i { transition:transform .3s var(--ease); font-size:12px; }
+    .scard:hover .more i { transform:translateX(4px); }
+    .scard:hover .more { color:var(--accent); }
+
+    /* ============ Industry cards (Option 1: photo banner) ============ */
+    .cards3 { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .icard { background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-1); transition:transform .3s var(--ease),box-shadow .3s var(--ease); }
+    .icard:hover { transform:translateY(-5px); box-shadow:var(--shadow-2); }
+    .icard .ph { height:190px; overflow:hidden; }
+    .icard .ph img { width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease); }
+    .icard:hover .ph img { transform:scale(1.05); }
+    .icard .bd { padding:26px 28px 30px; }
+    .icard .pill { display:inline-flex; align-items:center; gap:7px; font-family:'Plus Jakarta Sans',sans-serif; font-size:12.5px; font-weight:700; color:var(--primary); background:var(--bg-blue); border-radius:999px; padding:5px 13px; }
+    .icard h3 { font-size:23px; font-weight:700; margin-top:14px; }
+    .icard p { font-size:15.5px; margin-top:8px; }
+
+    /* ============ Floating dock ============ */
+    .dock { position:fixed; right:22px; bottom:22px; z-index:60; display:flex; flex-direction:column; gap:10px; background:rgba(255,255,255,.72); backdrop-filter:blur(14px); border:1px solid rgba(226,232,240,.9); border-radius:18px; padding:10px; box-shadow:var(--shadow-2); }
+    .dock a { position:relative; width:46px; height:46px; border-radius:13px; display:flex; align-items:center; justify-content:center; font-size:18px; color:var(--primary); background:var(--bg-blue); transition:all .3s var(--ease); text-decoration:none; }
+    .dock a:hover { background:var(--primary); color:#fff; transform:scale(1.07); }
+    .dock a.wa { color:#1DA851; background:#EAF9F0; }
+    .dock a.wa:hover { background:#1DA851; color:#fff; }
+    .dock a .tip { position:absolute; right:58px; top:50%; transform:translateY(-50%); background:var(--ink); color:#fff; font-family:'Plus Jakarta Sans',sans-serif; font-size:12.5px; font-weight:600; white-space:nowrap; border-radius:8px; padding:6px 12px; opacity:0; pointer-events:none; transition:opacity .25s var(--ease); }
+    .dock a:hover .tip { opacity:1; }
+
+    /* ============ Accent usage demo (20%) ============ */
+    .accent-band { background:var(--bg-gray); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .accent-band .wrap { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:40px 32px; }
+    .accent-band h3 { font-size:26px; font-weight:800; }
+    .badge-new { display:inline-block; background:var(--accent); color:#fff; font-family:'Plus Jakarta Sans',sans-serif; font-size:11.5px; font-weight:700; letter-spacing:.08em; border-radius:999px; padding:4px 12px; vertical-align:middle; margin-left:10px; }
+
+    @media (max-width: 980px) {
+      .hero .grid,.cards4,.cards3 { grid-template-columns:1fr; }
+      .hero h1 { font-size:42px; }
+      .sect-head h2 { font-size:32px; }
+    }
+    </style>
+</head>
+<body>
+
+<div class="preview-bar"><b>DESIGN PREVIEW</b> — proposed UI/UX refresh. Not linked from the live site. Photo shown is a stand-in for the final Pexels selection.</div>
+
+<!-- Header -->
+<header class="site">
+    <div class="wrap row">
+        <img src="img/logo-sm.png" alt="Innovegic" style="height:42px;width:auto">
+        <nav class="nav" aria-label="Preview navigation">
+            <a class="on" href="#">Home</a><a href="#">About</a><a href="#">Products</a><a href="#">Solutions</a><a href="#">Industries</a><a href="#">Services</a>
+        </nav>
+        <a class="btn btn-primary btn-sm" href="#">Talk to an Expert</a>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="wrap grid">
+        <div>
+            <span class="kicker">Trusted Technology Consulting Partner</span>
+            <h1>Transforming Businesses Through <span class="em">Intelligent Digital Solutions</span></h1>
+            <p class="lede">AI-powered platforms, ERP solutions, cloud technologies and enterprise applications — for government, healthcare and modern enterprises across the GCC and beyond.</p>
+            <div class="ctas">
+                <a class="btn btn-primary" href="#">Request Demo <i class="fa-solid fa-arrow-right"></i></a>
+                <a class="btn btn-quiet" href="#">Talk to an Expert</a>
+            </div>
+            <div class="trust">
+                <span><i class="fa-solid fa-circle-check"></i>100+ projects delivered</span>
+                <span><i class="fa-solid fa-circle-check"></i>Government &amp; healthcare expertise</span>
+            </div>
+        </div>
+        <div class="hero-media">
+            <img src="img/poster.jpg" alt="Innovegic consultants in a strategy workshop" width="800" height="533">
+            <div class="tag">
+                <span class="dot"><i class="fa-solid fa-handshake"></i></span>
+                <span><b>Consulting-led delivery</b><small>Advisory • Build • Operate</small></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<p class="divider-label">Sample — Services section (Option 2: monochrome icon system)</p>
+
+<!-- Services -->
+<section class="sect gray" style="padding-top:48px">
+    <div class="wrap">
+        <div class="sect-head">
+            <span class="kicker">What We Do</span>
+            <h2>From Strategy to Managed Operations</h2>
+            <p>End-to-end services that take you from roadmap to running systems — and keep them running.</p>
+        </div>
+        <div class="cards4">
+            <div class="scard">
+                <div class="itile"><i class="fa-solid fa-compass"></i></div>
+                <h3>Technology Consulting</h3>
+                <p>Independent, vendor-neutral advice on architecture, platforms and technology investment.</p>
+                <a class="more" href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="scard">
+                <div class="itile"><i class="fa-solid fa-diagram-project"></i></div>
+                <h3>ERP Implementation</h3>
+                <p>Full-lifecycle delivery for XentraERP, ERPNext, NetSuite, SAP Business One and ByDesign.</p>
+                <a class="more" href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="scard">
+                <div class="itile"><i class="fa-solid fa-brain"></i></div>
+                <h3>AI Consulting</h3>
+                <p>Practical GenAI and machine learning adoption with governance built in from day one.</p>
+                <a class="more" href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="scard">
+                <div class="itile"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <h3>Cloud Migration</h3>
+                <p>Assessment, migration and optimization across AWS, Azure and Google Cloud.</p>
+                <a class="more" href="#">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<p class="divider-label">Sample — Industry cards (Option 1: photo banner style)</p>
+
+<!-- Industries -->
+<section class="sect" style="padding-top:48px">
+    <div class="wrap">
+        <div class="sect-head">
+            <span class="kicker">Industries</span>
+            <h2>Deep Expertise in Your Sector</h2>
+        </div>
+        <div class="cards3">
+            <div class="icard">
+                <div class="ph"><img src="img/portfolio-1.jpg" alt="Healthcare technology"></div>
+                <div class="bd">
+                    <span class="pill"><i class="fa-solid fa-heart-pulse"></i>Healthcare</span>
+                    <h3>Healthcare Transformation</h3>
+                    <p>Patient journeys, clinical workflows, NHRA compliance and DUR integration.</p>
+                </div>
+            </div>
+            <div class="icard">
+                <div class="ph"><img src="img/portfolio-2.jpg" alt="Government digital services"></div>
+                <div class="bd">
+                    <span class="pill"><i class="fa-solid fa-landmark"></i>Government</span>
+                    <h3>Government Solutions</h3>
+                    <p>Citizen portals, case automation and secure digital records.</p>
+                </div>
+            </div>
+            <div class="icard">
+                <div class="ph"><img src="img/portfolio-3.jpg" alt="Supply chain operations"></div>
+                <div class="bd">
+                    <span class="pill"><i class="fa-solid fa-truck-fast"></i>Supply Chain</span>
+                    <h3>Supply Chain &amp; WMS</h3>
+                    <p>Warehouse management, AI forecasting and end-to-end visibility.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<p class="divider-label">Sample — Accent color usage (pink limited to ~20%)</p>
+
+<div class="accent-band">
+    <div class="wrap">
+        <h3>NHRA Accreditation Support <span class="badge-new">NEW</span></h3>
+        <a class="btn btn-primary btn-sm" href="#">Start Your Journey <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</div>
+
+<div style="height:120px"></div>
+
+<!-- Floating dock -->
+<div class="dock" role="navigation" aria-label="Quick actions">
+    <a class="wa" href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i><span class="tip">Chat on WhatsApp</span></a>
+    <a href="#" aria-label="Call us"><i class="fa-solid fa-phone"></i><span class="tip">+973 3899 1983</span></a>
+    <a href="#" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i><span class="tip">Back to top</span></a>
+</div>
+
+</body>
+</html>
